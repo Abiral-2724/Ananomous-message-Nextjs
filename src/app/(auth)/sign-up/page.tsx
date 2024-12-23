@@ -196,12 +196,12 @@ const Page = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500">
               Already have an account?{' '}
-              <Link 
-                href="/sign-in" 
-                className="font-semibold text-primary hover:underline"
-              >
-                Sign in
-              </Link>
+              <Link
+              href="/sign-in"
+              className="text-gray-800 hover:text-gray-600 font-medium"
+            >
+              sign in
+            </Link>
             </p>
           </div>
         </CardContent>
