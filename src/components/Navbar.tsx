@@ -34,11 +34,11 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <Link href="/features" className="hover:text-blue-400 transition-colors">
-              Features
+            <Link href="/dashboard" className="hover:text-blue-400 transition-colors">
+             Dashboard
             </Link>
-            <Link href="/about" className="hover:text-blue-400 transition-colors">
-              About
+            <Link href="/" className="hover:text-blue-400 transition-colors">
+              Home
             </Link>
 
             {session ? (
@@ -93,16 +93,16 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
             <Link
-              href="/features"
+              href="/dashboard"
               className="block px-4 py-2 hover:bg-gray-800 rounded-md"
             >
-              Features
+              Dashboard
             </Link>
             <Link
-              href="/about"
+              href="/"
               className="block px-4 py-2 hover:bg-gray-800 rounded-md"
             >
-              About
+              Home
             </Link>
             {session ? (
               <>
