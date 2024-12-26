@@ -264,9 +264,9 @@ const Dashboard = () => {
                         <CardContent>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {messages.length > 0 ? (
-                                    messages.map((message) => (
+                                    messages.map((message ,index) => (
                                         <MessageCard
-                                            key={message.id}
+                                            key={index}
                                             message={message}
                                             onMessageDelete={handleDeleteMessage}
                                         />

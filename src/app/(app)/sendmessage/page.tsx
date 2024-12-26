@@ -1,5 +1,4 @@
-'use client'
-
+"use client"
 import { useState } from "react"
 import { Mail, Send } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import axios from "axios"
-import Navbar from '@/components/Navbar'
 
 export default function SendMessagePage() {
   const [username, setUsername] = useState("")
@@ -33,10 +31,11 @@ export default function SendMessagePage() {
       
       setUsername("")
       setContent("")
-    } catch (error: any) {
+    } catch (error) {  // Specify the type here
+        console.log(error) ;
       toast({
         title: "Error",
-        description: error.response?.data?.message || "Failed to send message",
+        description: "Failed to send message",
         variant: "destructive"
       })
     } finally {
@@ -68,7 +67,7 @@ export default function SendMessagePage() {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-gray-300" htmlFor="username">Recipient's Username</label>
+                  <label className="text-gray-300" htmlFor="username">Recipient&apos;s Username</label>
                   <Input
                     id="username"
                     value={username}

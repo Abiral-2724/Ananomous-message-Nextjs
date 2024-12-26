@@ -9,7 +9,7 @@ const openai = new OpenAI({
 // Specify the runtime
 export const runtime = 'edge';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const prompt =
      "Captain of indian cricket team"

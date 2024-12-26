@@ -52,7 +52,7 @@ export async function POST(request: Request) {
 
     }
     catch (error) {
-        console.log("failed to updaate user status to accept message")
+        console.log("failed to updaate user status to accept message",error)
         return Response.json({
             success: false,
             message: "failed to updaate user status to accept message"
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
 }
 
-export async function GET(request: Request) {
+export async function GET() {
     await dbConnect();
 
     const session = await getServerSession(authOptions);
@@ -108,7 +108,7 @@ export async function GET(request: Request) {
     
     }
     catch(error){
-        console.log("Error in getting message acceptaing status")
+        console.log("Error in getting message acceptaing status",error)
         return Response.json({
             success: false,
             message: "Error in getting message acceptaing status"

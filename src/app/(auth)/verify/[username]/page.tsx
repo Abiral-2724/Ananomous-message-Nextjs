@@ -1,7 +1,6 @@
-'use client'
-
+"use client"
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
@@ -81,7 +80,7 @@ const VerifyAccount = () => {
             Verify Your Account
           </CardTitle>
           <CardDescription className="text-center text-gray-500">
-            We've sent a verification code to your email
+            We&apos;ve sent a verification code to your email
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -136,7 +135,7 @@ const VerifyAccount = () => {
                   className="w-full text-sm text-gray-500 hover:text-black transition-colors duration-200"
                   onClick={() => form.reset()}
                 >
-                  Didn't receive a code? Resend
+                  Didn&apos;t receive a code? Resend
                 </Button>
               </div>
             </form>

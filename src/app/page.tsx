@@ -13,10 +13,21 @@ import {
 } from '@/components/ui/carousel'
 import Navbar from '@/components/Navbar'
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 
 export default function Home() {
-  const router = useRouter() ;
+  const router = useRouter();
+
+  // If any effect was causing issues with layout, consider switching useLayoutEffect to useEffect
+  useEffect(() => {
+    // If there are any cleanup operations needed on mount/unmount, we can do them here
+    return () => {
+      // Cleanup logic if required, for example:
+      console.log('Home component unmounted');
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 to-gray-800">
       <Navbar />
@@ -87,9 +98,9 @@ export default function Home() {
       </main>
 
       <footer className="text-center py-6 text-gray-400 bg-gray-900/50 backdrop-blur-sm mt-16">
-                <p>© 2024 True Feedback. All rights reserved.</p>
-                <p className="text-sm mt-1">Made with ❤️ by Abiral jain</p>
-            </footer>
+        <p>© 2024 True Feedback. All rights reserved.</p>
+        <p className="text-sm mt-1">Made with ❤️ by Abiral Jain</p>
+      </footer>
     </div>
-  )
+  );
 }
